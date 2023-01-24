@@ -25,7 +25,6 @@ pygame.init()
 width = 600
 height = 550
 screen = pygame.display.set_mode((width, height))
-13
 # set title
 pygame.display.set_caption("Tic Tac Toe")
 # set icon
@@ -60,7 +59,6 @@ pos = (100, 480)
 # screen.fill(backgroundColor)
 if "One" in msg or "1" in msg:
 color = playerOneColor
-14
 elif "Two" in msg or "2" in msg:
 color = playerTwoColor
 msgRendered = smallfont.render(msg, True, color)
@@ -95,7 +93,6 @@ return True
 def handleMouseEvent(pos):
 x = pos[0]
 y = pos[1]
-15
 global currentPlayer
 global xy
 if (x < 150 or x > 450 or y < 150 or y > 450):
@@ -134,7 +131,6 @@ create_thread(accept_msg)
 while running:
 for event in pygame.event.get():
 if event.type == pygame.QUIT:
-16
 running = False
 if event.type == pygame.MOUSEBUTTONUP:
 pos = pygame.mouse.get_pos()
@@ -171,7 +167,6 @@ except:
 print("Error occurred....Try again")
 elif recvDataDecode == "Error":
 print("Error occurred! Try again..")
-17
 elif recvDataDecode == "Matrix":
 print(recvDataDecode)
 matrixRecv = s.recv(2048 * 100)
