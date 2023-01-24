@@ -138,6 +138,5 @@ conn.close()
 def send_common_msg(text):
 playerConn[0].send(text.encode())
 playerConn[1].send(text.encode())
-12
 time.sleep(1)
 start_server()
